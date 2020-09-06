@@ -1,0 +1,44 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PUFFramework
+import AVFoundation
+import Accelerate
+import Foundation
+@_exported import PUFFramework
+import Photos
+import Swift
+import UIKit
+public enum R {
+  public enum Image {
+    public static let viewfinder_left: UIKit.UIImage
+    public static let viewfinder_right: UIKit.UIImage
+  }
+  public enum Text {
+    public static let result_button_ok: Swift.String
+    public static let result_button_detail: Swift.String
+    public static let result_button_info: Swift.String
+    public static let result_text_title: Swift.String
+    public static let result_text_genuine: Swift.String
+    public static let result_text_registered: Swift.String
+    public static let result_error_network: Swift.String
+    public static let result_error_invalid: Swift.String
+    public static let result_error_retry: Swift.String
+    public static let result_error_forgery: Swift.String
+    public static let result_error_auth: Swift.String
+    public static let result_error_damaged: Swift.String
+    public static let result_error_unregistered: Swift.String
+    public static let result_error_database: Swift.String
+    public static let result_error_region: Swift.String
+    public static let result_error_unknown: Swift.String
+    public static let result_error_resolution: Swift.String
+  }
+}
+public class Manager {
+  public init()
+  public static func getHomeVC() -> UIKit.UIViewController
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PUFLibrary {
+  public class func testPrint() -> Swift.String
+  @objc deinit
+}

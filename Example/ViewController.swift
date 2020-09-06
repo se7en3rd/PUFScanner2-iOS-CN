@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PUFFramework
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func launch(_ sender: UIButton) {
+        let vc = Manager.getHomeVC()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }    
 }
 

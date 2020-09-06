@@ -13,7 +13,23 @@
 		56E565782504C6EB00B2445F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E565762504C6EB00B2445F /* Main.storyboard */; };
 		56E5657A2504C6EE00B2445F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E565792504C6EE00B2445F /* Assets.xcassets */; };
 		56E5657D2504C6EE00B2445F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E5657B2504C6EE00B2445F /* LaunchScreen.storyboard */; };
+		56E565932504CD7F00B2445F /* PUFFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E565912504CD7C00B2445F /* PUFFramework.framework */; };
+		56E565942504CD7F00B2445F /* PUFFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56E565912504CD7C00B2445F /* PUFFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		56E565882504C71B00B2445F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				56E565942504CD7F00B2445F /* PUFFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		56E5656D2504C6EB00B2445F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		56E565792504C6EE00B2445F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56E5657C2504C6EE00B2445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56E5657E2504C6EE00B2445F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56E565912504CD7C00B2445F /* PUFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PUFFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E565932504CD7F00B2445F /* PUFFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +74,7 @@
 		56E5656F2504C6EB00B2445F /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				56E565912504CD7C00B2445F /* PUFFramework.framework */,
 				56E565702504C6EB00B2445F /* AppDelegate.swift */,
 				56E565722504C6EB00B2445F /* SceneDelegate.swift */,
 				56E565742504C6EB00B2445F /* ViewController.swift */,
@@ -77,6 +96,7 @@
 				56E565692504C6EB00B2445F /* Sources */,
 				56E5656A2504C6EB00B2445F /* Frameworks */,
 				56E5656B2504C6EB00B2445F /* Resources */,
+				56E565882504C71B00B2445F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,7 +306,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RSJJG6K83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Example",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.linxtelecom.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +329,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RSJJG6K83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Example",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.linxtelecom.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

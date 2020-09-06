@@ -1,0 +1,9 @@
+
+framework module PUFFramework {
+
+    umbrella header "PUFFramework.h"
+
+    export *
+    module * {export *}
+}
+module PUFFramework.Swift { header "PUFFramework-Swift.h" }
